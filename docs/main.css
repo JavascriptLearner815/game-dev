@@ -1,0 +1,33 @@
+:root {
+	--main-background: black; /* Sets the background of body and main elements. Fallback: white */
+	--edge-background: green; /* Sets the background of header, footer, and aside elements. Fallback: --main-background */
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+	min-width: 100vw;
+	min-height: 100vh;
+	background: var(--main-background, white);
+	text-align: center;
+}
+
+main {
+	background: var(--main-background, white);
+}
+
+header {
+	background: var(--edge-background, var(--main-background, white));
+}
+
+footer {
+	background: var(--edge-background, var(--main-background, white));
+}
+
+aside {
+	text-align: right;
+	background: var(--edge-background, var(--main-background, white));
+}
